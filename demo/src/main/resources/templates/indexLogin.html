@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Empresa e Funcionário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>CRUD Empresa e Funcionário</h1>
+
+<!-- Formulário para adicionar/alterar empresas -->
+<div class="form-container">
+    <h2>Adicionar/Editar Empresa</h2>
+    <form id="empresaForm">
+        <input type="text" id="empresaNome" placeholder="Nome da Empresa" required>
+        <input type="text" id="empresaEndereco" placeholder="Endereço" required>
+        <button type="submit">Salvar Empresa</button>
+    </form>
+</div>
+
+<!-- Tabela para exibir empresas -->
+<div class="table-container">
+    <h2>Empresas</h2>
+    <table id="empresasTable">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody id="empresasBody">
+        <!-- Linhas da tabela serão adicionadas dinamicamente -->
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
