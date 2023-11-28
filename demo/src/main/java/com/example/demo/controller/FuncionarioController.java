@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import ch.qos.logback.core.model.Model;
 import com.example.demo.dto.FuncionarioDTO;
 import com.example.demo.entity.Funcionario;
 import com.example.demo.repository.FuncionarioRepository;
@@ -8,6 +9,7 @@ import com.example.demo.service.FuncionarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,12 +17,15 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
+
+
 @RestController
 @RequestMapping(value = "/api/funcionario")
 public class FuncionarioController {
 
     @Autowired
     FuncionarioRepository repository;
+
 
     @GetMapping
     public List<Funcionario> list(){
