@@ -12,15 +12,51 @@ public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name;
+    private String name, rua, RA;
     private float salario;
 
-    public Funcionario() {
-    }
+    private int idade, cep;
 
     public Funcionario(FuncionarioDTO  funcionarioDTO) {
         this.name = funcionarioDTO.name();
         this.salario = funcionarioDTO.salario();
+
+    }
+
+    public Funcionario() {
+    }
+
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getRA() {
+        return RA;
+    }
+
+    public void setRA(String RA) {
+        this.RA = RA;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public int getCep() {
+        return cep;
+    }
+
+    public void setCep(int cep) {
+        this.cep = cep;
     }
 
     public long getId() {
